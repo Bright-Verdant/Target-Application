@@ -19,7 +19,7 @@ tBuilding.init(
       type: DataTypes.STRING,
     },
     postal: {
-      type: DataTypes.INTEGER
+      type: DataTypes.STRING
     },
     country: {
       type: DataTypes.STRING,
@@ -30,7 +30,6 @@ tBuilding.init(
     },
     county: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     city: {
       type: DataTypes.STRING,
