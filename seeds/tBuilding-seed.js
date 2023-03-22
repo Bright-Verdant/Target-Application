@@ -1,3 +1,7 @@
+// this code is defunct and replaced by seeds/index.js correct?
+
+
+
 const fs = require('fs');
 const tBuilding = require('../models/tBuilding-model');
 

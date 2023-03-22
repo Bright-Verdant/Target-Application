@@ -2,6 +2,9 @@
 
 -- check for database conflict before running
 DROP DATABASE IF EXISTS tBuilding_db;
+-- remove above code before project completion
+
+
 
 CREATE DATABASE tBuilding_db;
 
