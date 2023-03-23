@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 // Displays Sing up
-router.get("/", (req, res) => {
+router.get("/signUp", (req, res) => {
   res.render("signUp", { title: "Sign Up Page" });
 });
 
