@@ -22,18 +22,24 @@ const PORT = process.env.PORT || 3001;
 
 // app.use(session(sess));
 
-// Handlebars
+// Handlebars configuration
 const hbs = exphbs.create({});
-
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
+// Express middleware configuration
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("./public"));
 
+// Route to handlebars main page
 app.get("/", (req, res) => {
   res.render("layouts/main");
+});
+
+// Home page route
+app.get("/home", (req, res) => {
+  res.render("homepage", { title: "Home" });
 });
 
 // app.use(routes);
@@ -46,4 +52,3 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
-
