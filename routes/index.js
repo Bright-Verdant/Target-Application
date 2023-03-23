@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const homeRoutes = require("./homeRoutes");
+const signUpRoutes = require("./signUpRoutes");
+const loginRoutes = require("./loginRoutes");
 const apiRoutes = require('./api');
 // Allows handlebars to render templates (Keep here for now)
 router.get("/", (req, res) => {
@@ -8,7 +10,10 @@ router.get("/", (req, res) => {
 
 router.use("/", homeRoutes);
 
+router.use("/", loginRoutes);
+router.use("/", signUpRoutes);
 
-router.use('/api', apiRoutes);
+
+
 
 module.exports = router;
