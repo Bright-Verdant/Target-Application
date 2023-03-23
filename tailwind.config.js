@@ -4,5 +4,9 @@ module.exports = {
   theme: {
     extend: {},
   },
+  backgroundImage: {
+    "desktop": "url('/img/ldapLogo.png')",
+    
+  },
   plugins: [],
 };
