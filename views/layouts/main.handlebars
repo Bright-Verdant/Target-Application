@@ -1,11 +1,37 @@
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/css/output.css" rel="stylesheet" />
-    <title>{{title}}</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  
+  <link rel="stylesheet" type="text/css" href="/css/output.css">
+</head>
+<body>
+  <title>{{title}}</title>
   </head>
   <body>
     {{{body}}}
-  </body>
-</html>
+  <header>
+  </header>
+  <nav>
+    
+    {{#if loggedIn}}
+    
+    {{else}}
+    <a href="/api/users/login"></a>
+    {{/if}}
+  </nav>
+  <main>
+  
+    <div class="gallery">
+      {{{body}}}
+    </div>
+  </main>
+  
+ 
+</body>
+<html>
+  
+    
+
