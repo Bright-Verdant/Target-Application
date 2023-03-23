@@ -1,8 +1,9 @@
+const path = require("path");
 const express = require("express");
 const exphbs = require("express-handlebars");
 
 // const session = require("express-session");
-// const routes = require("./routes");
+const routes = require("./routes");
 
 // const sequelize = require('./config/connection');
 // const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -30,19 +31,9 @@ app.set("view engine", "handlebars");
 // Express middleware configuration
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("./public"));
+app.use(express.static(path.join(__dirname, "public")));
 
-// Route to handlebars main page
-app.get("/", (req, res) => {
-  res.render("layouts/main");
-});
-
-// Home page route
-app.get("/home", (req, res) => {
-  res.render("homepage", { title: "Home" });
-});
-
-// app.use(routes);
+app.use(routes);
 
 // Future use of sequelize
 // sequelize.sync({ force: false }).then(() => {
