@@ -9,7 +9,7 @@
     "tailwind:css": "npx tailwindcss -i public/css/input.css -o public/css/output.css --watch",
     "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run tailwind:css\"",
     "start": "node server.js",
-    "seeds": "node seeds/index.js"
+    "seed": "node seeds/index.js"
   },
   "keywords": [],
   "author": "",
