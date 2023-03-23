@@ -1,10 +1,30 @@
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/css/output.css" rel="stylesheet" />
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold underline bg-teal-800">Hello world!</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museum</title>
+  
+  <link rel="stylesheet" type="text/css" href="/css/output.css">
+</head>
+<body>
+  <header>
+  </header>
+  <nav>
+    
+    {{#if loggedIn}}
+    
+    {{else}}
+    <a href="/api/users/login"></a>
+    {{/if}}
+  </nav>
+  <main>
+  
+    <div class="gallery">
+      {{{body}}}
+    </div>
+  </main>
+  
+ 
+</body>
 </html>
