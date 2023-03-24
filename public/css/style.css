@@ -401,9 +401,7 @@ SAVED LOCATIONS FOR HOMEPAGE
   position: absolute;
 }
 @media (max-width: 991px) {
-  .saved-locations-saved-locations {
-    padding-top: 260px;
-  }
+
   .saved-locations-title {
     width: 100%;
     max-width: 1200px;
@@ -418,7 +416,6 @@ SAVED LOCATIONS FOR HOMEPAGE
 }
 @media (max-width: 767px) {
   .saved-locations-saved-locations {
-    padding-top: 350px;
     padding-left: var(--dl-space-space-oneandhalfunits);
     padding-right: var(--dl-space-space-oneandhalfunits);
   }
@@ -473,9 +470,6 @@ SAVED LOCATIONS FOR HOMEPAGE
   }
 }
 @media (max-width: 479px) {
-  .saved-locations-saved-locations {
-    padding-top: 200px;
-  }
   .saved-locations-cards {
     margin-top: var(--dl-space-space-threeunits);
     margin-bottom: var(--dl-space-space-threeunits);
