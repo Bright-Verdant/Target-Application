@@ -30,7 +30,8 @@ router.get(":tNumber|:address", (req, res) => {
       state: targetObject.state,
       postal: targetObject.postal
     };
-    res.json(filteredObject);
+    const valuesOnly = Object.values(filteredObject);
+    res.json(valuesOnly);
   } else {
     res.status(404).send("T-Number OR Address Not Found!");
   }
