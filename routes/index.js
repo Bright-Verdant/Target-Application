@@ -14,8 +14,7 @@ router.use("/", homeRoutes);
 router.use("/", loginRoutes);
 router.use("/", signUpRoutes);
 
-
-router.get(":tNumber|:address", (req, res) => {
+router.get('/api/:tNumber',  (req, res) => {
   const search = req.params.tNumber || req.params.address;
 
   const targetObject = data.find(
@@ -31,13 +30,11 @@ router.get(":tNumber|:address", (req, res) => {
       postal: targetObject.postal
     };
     const valuesOnly = Object.values(filteredObject);
-    res.json(valuesOnly);
+    res.json(filteredObject);
   } else {
     res.status(404).send("T-Number OR Address Not Found!");
   }
 });
-
-
 
 module.exports = router;
 
