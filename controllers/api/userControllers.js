@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { User } = require('../../models/User');
+const { User } = require('../../models');
 
 // Login route
 exports.getLoginPage = ('/login', (req, res) => {
   // If the user is already logged in, redirect to the homepage
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/home');
     return;
   }
   // Otherwise, render the 'login' template

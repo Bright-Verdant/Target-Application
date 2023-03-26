@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const homeRoutes = require("./homeRoutes");
-const signUpRoutes = require("./signUpRoutes");
-const loginRoutes = require("./loginRoutes");
+const userRoutes = require('../routes/api/userRoutes');
+const signUp = require('./signUp');
 const apiRoutes = require('./api');
 const data = require('../seeds/targetLocations.json');
 // Allows handlebars to render templates (Keep here for now)
@@ -10,9 +10,9 @@ router.get("/", (req, res) => {
 });
 
 router.use("/", homeRoutes);
-
-router.use("/", loginRoutes);
-router.use("/", signUpRoutes);
+router.use('/', userRoutes);
+router.use("/", signUp);
+router.use('/api', apiRoutes);
 
 router.get('/api/:tNumber',  (req, res) => {
   const search = req.params.tNumber || req.params.address;
