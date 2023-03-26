@@ -1,9 +1,13 @@
 /******************************************************************************
 STYLES FOR HERO SECTION ON HOMEPAGE
 ******************************************************************************/
+* {
+  font-family: "Times New Roman", Serif;
+}
+
 .hero-hero {
   width: 100%;
-  height: 90vh;
+  height: 85vh;
   display: flex;
   position: relative;
   align-items: center;
@@ -29,13 +33,13 @@ STYLES FOR HERO SECTION ON HOMEPAGE
 .hero-desktop-navigation {
   width: 100%;
   display: flex;
-  margin-top: 50px;
+  margin-top: 20px;
   align-items: center;
   flex-direction: column;
 }
 .hero-centered {
   width: 100%;
-  height: 101px;
+  height: 70px;
   display: flex;
   max-width: 1200px;
   box-shadow: 5px 5px 10px 0px #1f1f1f;
@@ -48,6 +52,29 @@ STYLES FOR HERO SECTION ON HOMEPAGE
   justify-content: space-between;
   background-color: #ffffff;
 }
+
+#searchCard {
+  box-shadow: 5px 5px 10px 2px #1f1f1f;
+  border-radius: 65px;
+  width: 400px;
+  margin-top: 60px;
+}
+
+#newForm {
+  margin-top: 45px;
+}
+
+#saveButton {
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+}
+
+#cityStatePostalEl {
+  margin-bottom: 30px;
+}
+
 .hero-left {
   height: 100%;
   display: flex;
@@ -104,7 +131,7 @@ STYLES FOR HERO SECTION ON HOMEPAGE
 }
 .hero-header {
   display: flex;
-  margin-top: 140px;
+  margin-top: 20px;
   align-items: center;
   flex-direction: column;
 }
@@ -119,6 +146,7 @@ STYLES FOR HERO SECTION ON HOMEPAGE
 }
 .hero-container {
   flex: 0 0 auto;
+  margin-top: 30px;
   height: auto;
   display: flex;
   align-items: center;

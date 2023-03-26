@@ -14,8 +14,8 @@ router.use('/', userRoutes);
 router.use("/", signUp);
 router.use('/api', apiRoutes);
 
-router.get('/api/:tNumber',  (req, res) => {
-  const search = req.params.tNumber || req.params.address;
+router.get('/api/:value',  (req, res) => {
+  const search = req.params.value;
 
   const targetObject = data.find(
     obj => obj.tNumber.toLowerCase() === search.toLowerCase() || obj.address.toLowerCase() === search.toLowerCase()
@@ -29,7 +29,6 @@ router.get('/api/:tNumber',  (req, res) => {
       state: targetObject.state,
       postal: targetObject.postal
     };
-    const valuesOnly = Object.values(filteredObject);
     res.json(filteredObject);
   } else {
     res.status(404).send("T-Number OR Address Not Found!");
