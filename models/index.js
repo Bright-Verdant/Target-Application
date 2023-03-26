@@ -1,7 +1,7 @@
-const user = require('./user');
+const User = require('./User');
 const tBuilding = require('./tBuilding-model');
 
 
 
 
-module.exports = { user, tBuilding };
+module.exports = { User, tBuilding };
