@@ -1,4 +1,5 @@
-function getSearchData() {
+function getSearchData(event) {
+    event.preventDefault();
     const inputValue = document.getElementById('searchText').value;
     fetch(`/api/${inputValue}`) 
         .then((response) => response.json())
@@ -14,10 +15,12 @@ function getSearchData() {
             const postal = data.postal;
             const cSP = `${city}, ${state} ${postal}`;
             document.getElementById("cityStatePostalEl").innerText = cSP
+            document.getElementById('newForm').reset();
         })
         .catch((error) => {
             console.error(error);
             alert('T-Number OR Address Not Found!');
+            document.getElementById('errorCard')
         });
 }
 
