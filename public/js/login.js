@@ -1,5 +1,3 @@
-
-
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -20,9 +18,6 @@ const loginFormHandler = async (event) => {
     }
   }
 };
-
-
-
 
 function redirectToSignIn() {
 window.location.href = '/login';
