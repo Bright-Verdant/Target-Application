@@ -1,36 +1,57 @@
- 
- 
  <section id="loginSignup" class="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
   <div class="container h-full p-10">
     <div
-      class="g-6 flex h-full flex-wrap  items-center justify-center text-neutral-800 dark:text-neutral-200">
+      class="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200"
+    >
       <div class="w-screen">
-        <div
-          class="block rounded-lg bg-stone-50 shadow-lg dark:bg-neutral-800">
+        <div class="block rounded-lg bg-stone-50 shadow-lg dark:bg-neutral-800">
           <div class="g-0 lg:flex lg:flex-wrap">
             <div class="px-4 md:px-0 lg:w-6/12">
               <div class="md:mx-6 md:p-12">
                 <div class="text-center">
                   <img
                     class="mx-auto w-3/6 h-70"
-                   src="/img/ldapLogo.png" 
-                    alt="logo" />
+                    src="/img/ldapLogo.png"
+                    alt="logo"
+                  />
                   <h4 class="mt-1 mb-12 pb-1 text-xl font-semibold">
                     LDAP
                   </h4>
                 </div>
-             
+
                 <form class="form signup-form">
                   <p class="mb-4">Please login to your account</p>
-                  <div class="form-group  relative mb-4" data-te-input-wrapper-init>
+                  <div
+                    class="form-group relative mb-4"
+                    data-te-input-wrapper-init
+                  >
                     <input
                       type="text"
                       class="form-input peer block min-h-[auto] w-full rounded border border-gray-400 bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none"
                       id="username-signup"
-                      placeholder="Username" />
-                    <label 
+                      placeholder="Username"
+                    />
+                    <label
                       for="username-signup"
                       class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-blue-600 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
+                    >Username
+                    </label>
+                  </div>
+                  <div
+                    class="form-group relative mb-4"
+                    data-te-input-wrapper-init
+                  >
+                    <input
+                      type="text"
+                      id="email-signup"
+                      class="form-input peer block min-h-[auto] w-full rounded border border-gray-400 bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      placeholder="Email"
+                    />
+                    <label
+                      for="email-signup"
+                      class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-blue-600 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
+                    >Email
+
                       >
                     </label>
                   </div>
@@ -43,56 +64,76 @@
                       for="email-signup"
                       class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500"
                       >
+
                     </label>
                   </div>
-                  <div class="form-group relative mb-4" data-te-input-wrapper-init>
+                  <div
+                    class="form-group relative mb-4"
+                    data-te-input-wrapper-init
+                  >
                     <input
                       type="password"
+                      
+                      class="form-input peer block min-h-[auto] w-full rounded border border-gray-400 bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+
                       class="form-input peer block min-h-[auto] w-full rounded border border-gray-400  bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none"
+
                       id="password-signup"
-                      placeholder="Password" />
+                      placeholder="Password"
+                    />
                     <label
                       for="password-signup"
+
+                      class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-blue-600 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
+                    >Password
+
                       class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500"
                       >
                     </label>
                   </div>
                   <div class="mb-12 pt-1 pb-1 text-center">
-                    <button  
+                    <button
                       class="btn btn-primary form-group mb-3 inline-block w-full rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
                       type="submit"
                       data-te-ripple-init
                       data-te-ripple-color="light"
                       style="
                         background: linear-gradient(to right,  #d8363a,  #8C4747);
-                      ">
+                      "
+                    >
                       Sign Up
                     </button>
-                  
+
                   </div>
-                  
+
                 </form>
               </div>
             </div>
             <div
               class="flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none"
-              style="background: linear-gradient(to right, #d8363a,  #8C4747)">
+              style="background: linear-gradient(to right, #d8363a,  #8C4747)"
+            >
               <div class="px-4 py-6 text-white md:mx-6 md:p-12">
                 <h4 class="mb-6 text-xl font-semibold">
                   We are more than just a company
                 </h4>
                 <p class="text-sm mb-20">
-                  Sign in if you wish to continue without any history being saved. If you wish to revisit your searched history, please sign up.
+                  Sign in if you wish to continue without any history being
+                  saved. If you wish to revisit your searched history, please
+                  sign up.
                 </p>
-                <button type="button" class="signIn mb-3 inline-block w-full rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
-                      onclick="redirectToSignIn()"
-                      type="button"
-                      data-te-ripple-init
-                      data-te-ripple-color="light"
-                      style="
+                <button
+                  type="button"
+                  class="signIn mb-3 inline-block w-full rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
+                  onclick="redirectToSignIn()"
+                  type="button"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  style="
                         background: linear-gradient(to right,  #8C4747,   #d8363a);
-                      ">Sign In</button>
-                 
+                      "
+                >Sign In</button>
+
               </div>
             </div>
           </div>

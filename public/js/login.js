@@ -28,12 +28,11 @@ document
   .addEventListener('submit', loginFormHandler);
 
 
-
-
-
-
-
 document.querySelector('.signUp')
 function redirectToSignUp() {
   window.location.href = '/signup';
+}
+
+function redirectToHome() {
+  window.location.href = '/home';
 }
