@@ -16,25 +16,14 @@ router.use('/', userRoutes);
 router.use("/", signUp);
 router.use('/api', apiRoutes);
 
-router.get('/api/:value',  (req, res) => {
+router.get('/api/:value', (req, res) => {
   const search = req.params.value;
 
   const targetObject = data.find(
     obj => obj.tNumber.toLowerCase() === search.toLowerCase() || obj.address.toLowerCase() === search.toLowerCase()
   );
-
-  // if (targetObject) {
-  //   const filteredObject = {
-  //     tNumber: targetObject.tNumber,
-  //     address: targetObject.address,
-  //     city: targetObject.city,
-  //     state: targetObject.state,
-  //     postal: targetObject.postal
-  //   };
-    res.json(targetObject);
-  // } else {
-  //   res.status(404).send("T-Number OR Address Not Found!");
-  // }
+  
+  res.json(targetObject);
 });
 
 module.exports = router;

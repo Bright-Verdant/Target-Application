@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class SaveData extends Model {}
+class SaveData extends Model { }
 
 
 SaveData.init(
@@ -11,9 +11,9 @@ SaveData.init(
       allowNull: true,
       primaryKey: true,
     },
-   
+
     postal: {
-        allowNull: true,
+      allowNull: true,
       type: DataTypes.STRING
     },
 
@@ -22,7 +22,7 @@ SaveData.init(
       allowNull: true,
     },
   },
-  
+
 
 
 
