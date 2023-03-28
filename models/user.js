@@ -2,13 +2,14 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {
+class user extends Model {
+    // hashes the users inputted login password and compares it against the stored login info, returns true or false
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-User.init(
+user.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -19,6 +20,7 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+
     },
     email: {
       type: DataTypes.STRING,
@@ -37,8 +39,12 @@ User.init(
     },
   },
   {
+    // this hook hashes the password before it's seeded in the db and returns it as the object newUserData
     hooks: {
       async beforeCreate(newUserData) {
+
+        newUserData.username = newUserData.email;
+// the above line makes username = to email so when inserting data we only need to utilize email, this can be changed if we ever want to utilize both sepparately by simply deleting the above line "newUserData.username = newUserData.email;"
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
@@ -51,4 +57,4 @@ User.init(
   }
 );
 
-module.exports = User;
+module.exports = user;
