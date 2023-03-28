@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class user extends Model {
-    // hashes the users inputted login password and compares it against the stored login info, returns true or false
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
@@ -44,7 +43,7 @@ user.init(
       async beforeCreate(newUserData) {
 
         newUserData.username = newUserData.email;
-// the above line makes username = to email so when inserting data we only need to utilize email, this can be changed if we ever want to utilize both sepparately by simply deleting the above line "newUserData.username = newUserData.email;"
+// the above line makes username = to email so when inserting data we only need to utilize email, this can be changed if we ever want to utilize both separately by simply deleting the above line "newUserData.username = newUserData.email;"
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
@@ -56,5 +55,3 @@ user.init(
     modelName: 'user',
   }
 );
-
-module.exports = user;
