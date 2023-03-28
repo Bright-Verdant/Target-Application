@@ -5,10 +5,6 @@ const signUp = require('./signUp');
 const saveCard = require('../routes/api/userRoutes');
 const apiRoutes = require('./api');
 const data = require('../seeds/targetLocations.json');
-// Allows handlebars to render templates (Keep here for now)
-router.get("/", (req, res) => {
-  res.render("layouts/main");
-});
 
 router.use("/saveCard", saveCard)
 router.use("/", homeRoutes);
