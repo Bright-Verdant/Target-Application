@@ -15,6 +15,7 @@ STYLES FOR HERO SECTION ON HOMEPAGE
   padding-left: 50px;
   padding-right: 50px;
   flex-direction: column;
+  background: #aa0000;
 }
 
 .hero-menu {
@@ -84,6 +85,11 @@ STYLES FOR HERO SECTION ON HOMEPAGE
 
 #cityStatePostalEl {
   margin-bottom: 30px;
+}
+
+#loginSignup {
+  display: flex;
+  justify-content: center;
 }
 
 .hero-left {

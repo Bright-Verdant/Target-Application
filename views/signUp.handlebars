@@ -1,4 +1,4 @@
-<section class="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
+ <section id="loginSignup" class="gradient-form h-full bg-neutral-200 dark:bg-neutral-700">
   <div class="container h-full p-10">
     <div
       class="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200"
@@ -27,7 +27,7 @@
                   >
                     <input
                       type="text"
-                      class="form-input peer block min-h-[auto] w-full rounded border border-gray-400 bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      class="form-input peer block min-h-[auto] w-full rounded border border-gray-400 bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none"
                       id="username-signup"
                       placeholder="Username"
                     />
@@ -51,6 +51,20 @@
                       for="email-signup"
                       class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-blue-600 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
                     >Email
+
+                      >
+                    </label>
+                  </div>
+                  <div class="form-group relative mb-4" data-te-input-wrapper-init>
+                    <input 
+                      type="text" id="email-signup"
+                      class="form-input peer block min-h-[auto] w-full rounded border border-gray-400  bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none"
+                      placeholder="Email" />
+                    <label
+                      for="email-signup"
+                      class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500"
+                      >
+
                     </label>
                   </div>
                   <div
@@ -59,14 +73,22 @@
                   >
                     <input
                       type="password"
+                      
                       class="form-input peer block min-h-[auto] w-full rounded border border-gray-400 bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+
+                      class="form-input peer block min-h-[auto] w-full rounded border border-gray-400  bg-transparent py-[0.32rem] px-3 leading-[2.15] outline-none"
+
                       id="password-signup"
                       placeholder="Password"
                     />
                     <label
                       for="password-signup"
+
                       class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-blue-600 peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-neutral-200"
                     >Password
+
+                      class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500"
+                      >
                     </label>
                   </div>
                   <div class="mb-12 pt-1 pb-1 text-center">

@@ -1,4 +1,4 @@
-<section class="hero-hero bg-red-600">
+<section class="hero-hero">
   <div class="hero-menu">
     <div class="hero-desktop-navigation">
       <nav class="hero-centered">
@@ -16,6 +16,7 @@
           <button onclick="redirectToSignIn()" class="hero-sign-in"><span>Sign
               in</span></button>
           <button id="logout" class="">Logout</button>
+          <a href="/api/users/login" class="hero-sign-in Link"><span>Sign in</span></a>
         </div>
       </nav>
     </div>
@@ -76,6 +77,11 @@
         id="saveButton"
         class="font-bold bg-black text-white py-2 px-4 rounded"
       >Save</button>
+
+      <div id="address" class="font-medium  mb-2 pr-12 mt-5 text-2xl text-left"></div>
+      <div id="cityStatePostalEl" class="font-medium  pr-12 text-2xl text-left mb-5"></div>
+      <button id="saveButton"class="font-bold bg-black text-white py-1 px-2 rounded">Save</button>
+
     </div>
   </div>
 </section>
@@ -89,3 +95,5 @@
 <script src="/js/script.js"></script>
 <script src="/js/logout.js"></script>
 <script src="/js/login.js"></script>
+<script src="/js/saveData.js"></script>
+

@@ -2,10 +2,12 @@ const router = require("express").Router();
 const homeRoutes = require("./homeRoutes");
 const userRoutes = require('../routes/api/userRoutes');
 const signUp = require('./signUp');
+const saveCard = require('../routes/api/userRoutes');
 const apiRoutes = require('./api');
 const data = require('../seeds/targetLocations.json');
 
 // User Routes to pages
+router.use("/saveCard", saveCard)
 router.use("/", homeRoutes);
 router.use('/', userRoutes);
 router.use("/", signUp);
