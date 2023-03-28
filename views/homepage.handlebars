@@ -80,8 +80,95 @@
       </div>
     </div>
   </div>
+{{!-- creates the google map --}}
+{{!-- <a href='#/' id='trig1'>HOVER</a> --}}
+  {{!-- <div className="mapContainer"> --}}
+            
+            <iframe
+              id='ifrm1' name='ifrm1'
+              width="650"
+              height="400"
+              frameborder="0"
+              style="border:0"
+              referrerpolicy="no-referrer-when-downgrade"
+              src=""
+              allowfullscreen>
+              
+            </iframe>
+
+
+
+
+
+{{!-- creates the google map --}}
+
+{{!-- <a href='#/' id='trig1'>HOVER</a>
+  {{!-- <div className="mapContainer"> --}}
+    
+          <iframe
+          id='ifrm1' name='ifrm1'
+            width="650"
+            height="400"
+            frameborder="0"
+            style="border:0"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/view?key=AIzaSyANd6KpHjMXllywPlZP7IqJa8sniudkR5w
+            &&center=`${tBuilding.latitude}`,`${tBuilding.longitude}`
+            &zoom=15
+            &maptype=satellite"
+            allowfullscreen
+          ></iframe> --}}
+
+
+
+
+<div id="mapContainer">
+    <iframe id="map"></iframe>
+</div>
+
+
+
+
+          
+{{!-- <a href='#/' id='trig1'>HOVER</a>
+<iframe
+  id='ifrm1'
+  name='ifrm1'
+  width="650"
+  height="400"
+  frameborder="0"
+  style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  allowfullscreen
+  src=""
+></iframe>
+
+<!-- JavaScript code -->
+<script>
+  // assuming you have a tBuilding model with latitude and longitude data
+  const tBuilding = {
+    latitude: -33.8569,
+    longitude: 151.2152
+  };
+
+  // select the iframe element and update its src attribute with the new URL
+  const iframe = document.getElementById('ifrm1');
+  const url = `https://www.google.com/maps/embed/v1/view?key=<your_api_key>&center=${tBuilding.latitude},${tBuilding.longitude}&zoom=15&maptype=satellite`;
+  iframe.setAttribute('src', url);
+</script>
+ --}}
+
+         
+
+
+
+
+
+
+
 </section>
 
 <script src="/js/script.js"></script>
 <script src="/js/logout.js"></script>
 <script src="/js/saveData.js"></script>
+<script src="/js/map.js"></script>

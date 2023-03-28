@@ -39,6 +39,15 @@ tBuilding.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    latitude: {
+      type: DataTypes.DECIMAL(10, 4),
+      allowNull: false,
+    },
+    longitude: {
+      type: DataTypes.DECIMAL(10, 4),
+      allowNull: false,
+    },
+    
   },
 
 
