@@ -24,14 +24,7 @@ router.get('/api/:value',  (req, res) => {
   );
 
   if (targetObject) {
-    const filteredObject = {
-      tNumber: targetObject.tNumber,
-      address: targetObject.address,
-      city: targetObject.city,
-      state: targetObject.state,
-      postal: targetObject.postal
-    };
-    res.json(filteredObject);
+    res.json(targetObject);
   } else {
     res.status(404).send("T-Number OR Address Not Found!");
   }
