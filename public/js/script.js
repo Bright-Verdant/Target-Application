@@ -29,6 +29,8 @@ function getSearchData(event) {
         });
 }
 
+
+ ${lat}, ${l}at}
 function deleteError() {
     document.querySelector("#errorCard").style.display = 'none';
 }

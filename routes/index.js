@@ -23,18 +23,18 @@ router.get('/api/:value',  (req, res) => {
     obj => obj.tNumber.toLowerCase() === search.toLowerCase() || obj.address.toLowerCase() === search.toLowerCase()
   );
 
-  if (targetObject) {
-    const filteredObject = {
-      tNumber: targetObject.tNumber,
-      address: targetObject.address,
-      city: targetObject.city,
-      state: targetObject.state,
-      postal: targetObject.postal
-    };
-    res.json(filteredObject);
-  } else {
-    res.status(404).send("T-Number OR Address Not Found!");
-  }
+  // if (targetObject) {
+  //   const filteredObject = {
+  //     tNumber: targetObject.tNumber,
+  //     address: targetObject.address,
+  //     city: targetObject.city,
+  //     state: targetObject.state,
+  //     postal: targetObject.postal
+  //   };
+    res.json(targetObject);
+  // } else {
+  //   res.status(404).send("T-Number OR Address Not Found!");
+  // }
 });
 
 module.exports = router;
