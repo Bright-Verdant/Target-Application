@@ -19,6 +19,7 @@ user.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+
     },
     email: {
       type: DataTypes.STRING,
@@ -37,8 +38,12 @@ user.init(
     },
   },
   {
+    // this hook hashes the password before it's seeded in the db and returns it as the object newUserData
     hooks: {
       async beforeCreate(newUserData) {
+
+        newUserData.username = newUserData.email;
+// the above line makes username = to email so when inserting data we only need to utilize email, this can be changed if we ever want to utilize both separately by simply deleting the above line "newUserData.username = newUserData.email;"
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
@@ -50,5 +55,3 @@ user.init(
     modelName: 'user',
   }
 );
-
-module.exports = user;
