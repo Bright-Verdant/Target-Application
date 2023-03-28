@@ -17,13 +17,16 @@
       </nav>
     </div>
   </div>
+
+  
+
   <div id='errorCard' class="bg-red-100 border border-red-400 text-red-700 px-10 py-5 rounded relative hidden"  role="alert">
   <p class="font-bold text-2xl">There was an error</p>
   <p class="text-md">T-Number or Address was not found please try again</p>
   <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
     <svg id='closeError' class="fill-current h-7 w-6 text-black" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
   </span>
-</div>
+  </div>
   <div class="hero-header">
     <h1 class="hero-text4"><span>Search Target Locations</span></h1>
     <form id='newForm' class="hero-container pt-8">
@@ -34,6 +37,7 @@
       </div>
     </form>
   </div>
+
   <div id="searchCard" class="bg-white rounded-lg shadow-md p-8 mt-15 flex flex-wrap overflow-hidden invisible relative text-2xl">
     <div>
       <img alt="Target" class="hero-logo1 absolute top-0 right-0 rounded-full mt-6 mr-2" src="https://logolook.net/wp-content/uploads/2021/06/Symbol-Target.png">
@@ -43,7 +47,6 @@
       <button id="saveButton"class="font-bold bg-black text-white py-1 px-2 rounded">Save</button>
     </div>
   </div>
-
 
 </section>
 
@@ -80,90 +83,24 @@
       </div>
     </div>
   </div>
-{{!-- creates the google map --}}
-{{!-- <a href='#/' id='trig1'>HOVER</a> --}}
-  {{!-- <div className="mapContainer"> --}}
-            
-            <iframe
-              id='ifrm1' name='ifrm1'
-              width="650"
-              height="400"
-              frameborder="0"
-              style="border:0"
-              referrerpolicy="no-referrer-when-downgrade"
-              src=""
-              allowfullscreen>
-              
-            </iframe>
 
-
-
-
-
-{{!-- creates the google map --}}
-
-{{!-- <a href='#/' id='trig1'>HOVER</a>
-  {{!-- <div className="mapContainer"> --}}
-    
-          <iframe
-          id='ifrm1' name='ifrm1'
-            width="650"
-            height="400"
-            frameborder="0"
-            style="border:0"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed/v1/view?key=AIzaSyANd6KpHjMXllywPlZP7IqJa8sniudkR5w
-            &&center=`${tBuilding.latitude}`,`${tBuilding.longitude}`
-            &zoom=15
-            &maptype=satellite"
-            allowfullscreen
-          ></iframe> --}}
-
-
-
-
-<div id="mapContainer">
-    <iframe id="map"></iframe>
-</div>
-
-
-
-
-          
-{{!-- <a href='#/' id='trig1'>HOVER</a>
-<iframe
-  id='ifrm1'
-  name='ifrm1'
-  width="650"
-  height="400"
-  frameborder="0"
-  style="border:0"
-  referrerpolicy="no-referrer-when-downgrade"
-  allowfullscreen
-  src=""
-></iframe>
-
-<!-- JavaScript code -->
-<script>
-  // assuming you have a tBuilding model with latitude and longitude data
-  const tBuilding = {
-    latitude: -33.8569,
-    longitude: 151.2152
-  };
-
-  // select the iframe element and update its src attribute with the new URL
-  const iframe = document.getElementById('ifrm1');
-  const url = `https://www.google.com/maps/embed/v1/view?key=<your_api_key>&center=${tBuilding.latitude},${tBuilding.longitude}&zoom=15&maptype=satellite`;
-  iframe.setAttribute('src', url);
-</script>
- --}}
-
-         
-
-
-
-
-
+{{!-- display's the embed map api from /public/js/script.js --}}
+  <div class="flex justify-center items-center h-screen">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div></div>
+        <div class="w-full h-96">
+          <div class="relative">
+                  <div id="mapContainer" class="absolute top-50 left-100 w-full h-full">
+                  <iframe id="map" class="w-full h-full"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{!-- end map container --}}
 
 
 </section>
@@ -171,4 +108,3 @@
 <script src="/js/script.js"></script>
 <script src="/js/logout.js"></script>
 <script src="/js/saveData.js"></script>
-<script src="/js/map.js"></script>
