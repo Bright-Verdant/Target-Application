@@ -5,10 +5,6 @@ const signUp = require('./signUp');
 const saveCard = require('../routes/api/userRoutes');
 const apiRoutes = require('./api');
 const data = require('../seeds/targetLocations.json');
-// Allows handlebars to render templates (Keep here for now)
-router.get("/", (req, res) => {
-  res.render("layouts/main");
-});
 
 router.use("/saveCard", saveCard)
 router.use("/", homeRoutes);
@@ -24,14 +20,7 @@ router.get('/api/:value',  (req, res) => {
   );
 
   if (targetObject) {
-    const filteredObject = {
-      tNumber: targetObject.tNumber,
-      address: targetObject.address,
-      city: targetObject.city,
-      state: targetObject.state,
-      postal: targetObject.postal
-    };
-    res.json(filteredObject);
+    res.json(targetObject);
   } else {
     res.status(404).send("T-Number OR Address Not Found!");
   }
