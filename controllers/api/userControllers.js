@@ -5,12 +5,15 @@ const { User } = require('../../models');
 exports.getLoginPage = ('/login', (req, res) => {
   // If the user is already logged in, redirect to the homepage
   if (req.session.loggedIn) {
-    res.redirect('/home');
+    // Render the 'home' template with a logout button
+    const logoutButton = '<button id="logout" class="nav-button nav-text">Logout</button>';
+    res.render('home', { logoutButton });
     return;
   }
   // Otherwise, render the 'login' template
   res.render('login');
 });
+
 
 exports.createUser = async (req, res) => {
   try {
