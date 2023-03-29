@@ -16,10 +16,37 @@ function getSearchData(event) {
             const city = data.city;
             const state = data.state;
             const postal = data.postal;
+            const latitude = data.latitude.toFixed(4);
+            const longitude = data.longitude.toFixed(4);
+    
+            const needle = `${latitude}, ${longitude}`;
+            console.log(needle);
+
             const cSP = `${city}, ${state} ${postal}`;
             document.getElementById("cityStatePostalEl").innerText = cSP;
             document.getElementById('newForm').reset();
             showDetails();
+
+            // map code
+            const mapContainer = document.getElementById('mapContainer');
+
+            const existingMap = mapContainer.querySelector('iframe');
+            if (existingMap) {
+            mapContainer.removeChild(existingMap);
+            }
+
+            const map = document.createElement('iframe');
+            map.id = 'map';
+            map.width = '300';
+            map.height = '300';
+            map.frameborder = '0';
+            map.style.border = '0';
+            map.referrerpolicy = 'no-referrer-when-downgrade';
+            map.src = `https://www.google.com/maps/embed/v1/view?key=AIzaSyANd6KpHjMXllywPlZP7IqJa8sniudkR5w&center=${needle}&zoom=15&maptype=satellite`;
+            map.allowfullscreen = true;
+            mapContainer.appendChild(map);
+            // end map code
+
         })
         .catch(() => {
             errorCardEl.classList.remove("hidden");
@@ -53,3 +80,9 @@ document.getElementById('closeError').addEventListener("click", function () {
     document.querySelector("#errorCard").style.display = 'none';
 });
 
+const mapButton = document.getElementById('mapButton');
+const mapContainer = document.getElementById('mapContainer');
+
+mapButton.addEventListener('click', () => {
+  mapContainer.classList.toggle('hidden');
+});
