@@ -1,10 +1,9 @@
 const router = require("express").Router();
 const homeRoutes = require("./homeRoutes");
-const userRoutes = require('../routes/api/userRoutes');
-const signUp = require('./signUp');
-const saveCard = require('../routes/api/userRoutes');
-const apiRoutes = require('./api');
-const data = require('../seeds/targetLocations.json');
+const userRoutes = require("../routes/api/userRoutes");
+const signUp = require("./signUp");
+const apiRoutes = require("./api");
+const data = require("../seeds/targetLocations.json");
 
 // User Routes to pages
 router.use("/", homeRoutes);
@@ -12,6 +11,7 @@ router.use("/", userRoutes);
 router.use("/", signUp);
 router.use("/api", apiRoutes);
 
+// API Route to get target location data
 router.get("/api/:value", (req, res) => {
   const search = req.params.value;
 
