@@ -1,91 +1,92 @@
 <section class="hero-hero">
-  <div>
-    <div class="hero-menu">
-      <div class="hero-desktop-navigation">
-        <nav class="hero-centered">
-          <div class="hero-left">
-            <a href="/">
-              <img
-                alt="Target "
-                src="./img/target-logo.png"
-                loading="eager"
-                class="hero-logo1"
-              />
-            </a>
-          </div>
-          <h1 class="hero-text4">Target Location Search</h1>
 
-          <div class="navigation-links">
+  <div class="hero-menu">
+    <div class="hero-desktop-navigation">
+      <nav class="hero-centered">
+        <div class="hero-left">
+          <a href="/home">
+            <img
+              alt="Target "
+              src="./img/target-logo.png"
+              loading="eager"
+              class="hero-logo1"
+            />
+          </a>
+        </div>
+        <h1 class="hero-text4">Target Location Search</h1>
+        <div class="navigation-links">
+           
          
           <button    onclick="redirectToSignIn()"  class="nav-button nav-text">signIn</button>
-          
-          
-          
+      
+      </nav>
+    </div>
+  </div>
 
+  <div
+    id="errorCard"
+    class="bg-red-700 px-10 py-5 rounded relative hidden"
+    role="alert"
+  >
+    <p class="font-bold text-2xl">There was an error</p>
+    <p class="text-md">T-Number or Address was not found please try again</p>
+    <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+      <svg
+        id="closeError"
+        class="fill-current h-8 w-8 text-black"
+        role="button"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
+        <title>Close</title>
+        <path
+          d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
+        />
+      </svg>
+    </span>
+  </div>
 
- 
-
-          </div>
-        </nav>
+  <div class="hero-header">
+    <form id="newForm" class="hero-container pt-8">
+      <input
+        id="searchText"
+        type="text"
+        placeholder="Search by T-Number or Address"
+        class="hero-textinput input mr-5 p-2 rounded-lg"
+      />
+      <div class="hero-get-started1">
+        <button id="searchBut" class="hero-text5">Search</button>
       </div>
-    </div>
+    </form>
+  </div>
 
-    <div
-      id="errorCard"
-      class="bg-red-100 border border-red-400 text-red-700 px-10 py-5 rounded relative hidden"
-      role="alert"
-    >
-      <p class="font-bold text-2xl">There was an error</p>
-      <p class="text-md">T-Number or Address was not found please try again</p>
-      <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-        <svg
-          id="closeError"
-          class="fill-current h-7 w-6 text-black"
-          role="button"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-        ><title>Close</title><path
-            d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
-          /></svg>
-      </span>
-    </div>
-    <div class="hero-header">
-      <form id="newForm" class="hero-container pt-8">
-        <input
-          id="searchText"
-          type="text"
-          placeholder="Search by T-Number or Address"
-          class="hero-textinput input mr-5 p-2 rounded-lg"
-        />
-        <div class="hero-get-started1">
-          <button id="searchBut" class="nav-text">Search</button>
-        </div>
-      </form>
-    </div>
-    
-    <div
-      id="searchCard"
-      class="bg-white rounded-lg shadow-md p-8 mt-15 flex flex-wrap overflow-hidden invisible relative text-2xl"
-    >
-      <div>
-        <img
-          alt="Target"
-          class="hero-logo1 absolute top-0 right-0 rounded-full mt-6 mr-2"
-          src="./img/target-logo.png"
-        />
-        <h1 id="tNumber" class="font-bold text-2xl mb-2 text-left"></h1>
-        <div
-          id="address"
-          class="font-medium mb-2 pr-12 mt-5 text-2xl text-left"
-        ></div>
-        <div
-          id="cityStatePostalEl"
-          class="font-medium pr-12 text-2xl text-left mb-5"
-        ></div>
-        <button
-          id="saveButton"
-          class="font-bold bg-black text-white py-2 px-4 rounded"
-        >Save</button>
+  {{! map }}
+  <div id="mapContainer" class="hidden">
+    <iframe id="map"></iframe>
+  </div>
+
+  <div
+    id="searchCard"
+    class="bg-white rounded-lg shadow-md p-8 mt-15 flex flex-wrap invisible relative text-2xl"
+  >
+    <div>
+      <img
+        alt="Target"
+        class="hero-logo1 absolute top-0 right-0 rounded-full mt-6 mr-2"
+        src="./img/target-logo.png"
+      />
+      <h1 id="tNumber" class="font-bold text-2xl mb-2 text-left"></h1>
+      <div
+        id="address"
+        class="font-medium mb-2 pr-12 mt-5 text-2xl text-left"
+      ></div>
+      <div
+        id="cityStatePostalEl"
+        class="font-medium pr-12 text-2xl text-left mb-5"
+      ></div>
+      {{! map button }}
+      <div class="">
+        <button id="mapButton" class="map-button">Show Map</button>
       </div>
     </div>
   </div>
@@ -94,18 +95,13 @@
 {{! Footer }}
 <footer>
   <div class="bg-black">
-    <div class="container px-5 py-6 mx-auto items-center sm:flex-row flex-col">
-      <a
-        class="flex py-5 title-font font-medium items-center justify-center text-gray-900"
-      >
-        <img alt="Target " src="./img/target-logo.png" class="footer-img" />
+    <div class="container mx-auto items-center sm:flex-row flex-col">
+      <a class="flex py-5 font-medium items-center justify-center">
+        <img alt="Target" src="./img/target-logo.png" class="footer-img" />
       </a>
     </div>
   </div>
 </footer>
-
-
-
 
 <script src="/js/script.js"></script>
 <script src="/js/logout.js"></script>

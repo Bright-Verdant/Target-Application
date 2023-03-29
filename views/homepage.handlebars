@@ -1,70 +1,91 @@
 <section class="hero-hero">
+
   <div class="hero-menu">
     <div class="hero-desktop-navigation">
       <nav class="hero-centered">
         <div class="hero-left">
-          <a href="/">
-            <img alt="Target " src="./img/target-logo.png" loading="eager" class="hero-logo1" />
+          <a href="/home">
+            <img
+              alt="Target "
+              src="./img/target-logo.png"
+              loading="eager"
+              class="hero-logo1"
+            />
           </a>
         </div>
         <h1 class="hero-text4">Target Location Search</h1>
         <div class="navigation-links">
           <button id="logout" class="nav-button nav-text">Logout</button>
         </div>
+      </nav>
     </div>
-    </nav>
-  </div>
   </div>
 
-  {{!-- map --}}
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-     <div></div>
-      <div class="w-full h-96">
-       <div class="relative">
-         <div class="border-20 border-red rounded-xl overflow-hidden">
-          <div id="mapContainer" class="absolute top-10 left-0 w-full h-full hidden z-999">
-            <iframe id="map" class="w-full h-full"></iframe>
-             </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  {{!-- end map --}}
-
-  <div id='errorCard' class="bg-red-700 px-10 py-5 rounded relative hidden" role="alert">
+  <div
+    id="errorCard"
+    class="bg-red-700 px-10 py-5 rounded relative hidden"
+    role="alert"
+  >
     <p class="font-bold text-2xl">There was an error</p>
     <p class="text-md">T-Number or Address was not found please try again</p>
     <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-      <svg id='closeError' class="fill-current h-8 w-8 text-black" role="button" xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20">
+      <svg
+        id="closeError"
+        class="fill-current h-8 w-8 text-black"
+        role="button"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
         <title>Close</title>
         <path
-          d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+          d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"
+        />
       </svg>
     </span>
   </div>
 
   <div class="hero-header">
-    <form id='newForm' class="hero-container pt-8">
-      <input id="searchText" type="text" placeholder="Search by T-Number or Address"
-        class="hero-textinput input mr-5 p-2 rounded-lg" />
+    <form id="newForm" class="hero-container pt-8">
+      <input
+        id="searchText"
+        type="text"
+        placeholder="Search by T-Number or Address"
+        class="hero-textinput input mr-5 p-2 rounded-lg"
+      />
       <div class="hero-get-started1">
         <button id="searchBut" class="hero-text5">Search</button>
       </div>
     </form>
   </div>
 
-  <div id="searchCard"
-    class="bg-white rounded-lg shadow-md p-8 mt-15 flex flex-wrap invisible relative text-2xl">
+  {{! map }}
+  <div id="mapContainer" class="hidden">
+    <iframe id="map"></iframe>
+  </div>
+
+  <div
+    id="searchCard"
+    class="bg-white rounded-lg shadow-md p-8 mt-15 flex flex-wrap invisible relative text-2xl"
+  >
     <div>
-      <img alt="Target" class="hero-logo1 absolute top-0 right-0 rounded-full mt-6 mr-2" src="./img/target-logo.png">
+      <img
+        alt="Target"
+        class="hero-logo1 absolute top-0 right-0 rounded-full mt-6 mr-2"
+        src="./img/target-logo.png"
+      />
       <h1 id="tNumber" class="font-bold text-2xl mb-2 text-left"></h1>
-      <div id="address" class="font-medium  mb-2 pr-12 mt-5 text-2xl text-left"></div>
-      <div id="cityStatePostalEl" class="font-medium  pr-12 text-2xl text-left mb-5"></div>
-      {{!-- map button --}}
-        <div class="flex justify-start items-start h-screen font-bold bg-black text-white py-2 px-4 rounded">
-            <button id="mapButton" class="map-Button">Show Map</button>
-        </div>
+      <div
+        id="address"
+        class="font-medium mb-2 pr-12 mt-5 text-2xl text-left"
+      ></div>
+      <div
+        id="cityStatePostalEl"
+        class="font-medium pr-12 text-2xl text-left mb-5"
+      ></div>
+      {{! map button }}
+      <div class="">
+        <button id="mapButton" class="map-button">Show Map</button>
+      </div>
     </div>
   </div>
 </section>
