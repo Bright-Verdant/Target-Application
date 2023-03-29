@@ -326,6 +326,12 @@ footer {
   display: none;
 }
 
+@media (max-width: 627px) {
+  .mapContainer {
+  display: none;
+  }
+}
+
 .map-button-container {
   /* position: absolute;
   top: 0px;
