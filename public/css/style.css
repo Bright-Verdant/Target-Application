@@ -96,7 +96,6 @@ STYLES NAVIGATION ON HOMEPAGE
   font-weight: 700;
   line-height: 80px;
   margin-bottom: 5px;
-  
 }
 
 .hero-container {
@@ -180,18 +179,6 @@ STYLES SEARCH CARD SECTION ON HOMEPAGE
   color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-
-/* #mapButton {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  nav-down: 10px;
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; 
-} */
-
 
 #cityStatePostalEl {
   margin-bottom: 30px;
@@ -285,7 +272,7 @@ STYLES SEARCH CARD SECTION ON HOMEPAGE
 
 @media (max-width: 627px) {
   .hero-text4 {
-  display: none;
+    display: none;
   }
 }
 
@@ -302,7 +289,6 @@ STYLES SEARCH CARD SECTION ON HOMEPAGE
   .hero-get-started1 {
     width: 100%;
   }
-
 }
 
 /******************************************************************************
@@ -320,38 +306,32 @@ footer {
   background-size: fill;
 }
 
-
 /* map */
 .hidden {
   display: none;
 }
 
-.map-button-container {
-  /* position: absolute;
-  top: 0px;
-  right: 0px;
-  nav-down: 10px;
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; 
-  position: absolute;
-  left: 50%;
-  top: 85%;
-  transform: translate(-50%, -50%); */
+.map-button {
+  background-color: #000000;
+  color: #ffffff;
   position: absolute;
   left: 50%;
   top: 85%;
   transform: translate(-50%, -50%);
-
+  padding: 5px;
+  border-radius: 10px;
 }
 
 #mapContainer {
-  position: fixed;
-  top: 0%;
-  right: 10px;
-  left: 0px;
-  margin-top: 150px;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+  margin-right: 85px;
+  padding-top: 20px;
+}
+
+#map {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 2px #cc0000;
+  opacity: 85%;
 }
