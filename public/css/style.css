@@ -51,17 +51,17 @@ body {
 }
 
 .hero-centered {
-  width: 100%;
+  width: 65%;
   height: 70px;
   display: flex;
   box-shadow: 5px 5px 10px 0px #1f1f1f;
   box-sizing: initial;
   align-items: center;
-  padding-left: 100px;
   border-radius: 20px;
-  padding-right: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   flex-direction: row;
   justify-content: space-between;
   background-color: #f7f3f3;
@@ -90,12 +90,13 @@ STYLES NAVIGATION ON HOMEPAGE
 
 .hero-text4 {
   color: rgb(0, 0, 0);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-style: normal;
   text-align: center;
   font-weight: 700;
   line-height: 80px;
   margin-bottom: 5px;
+  
 }
 
 .hero-container {
@@ -125,7 +126,7 @@ STYLES NAVIGATION ON HOMEPAGE
   align-items: center;
   border-radius: 56px;
   flex-direction: column;
-  background-color: red;
+  background-color: #cc0000;
 }
 
 .nav-button:hover {
@@ -175,9 +176,12 @@ STYLES SEARCH CARD SECTION ON HOMEPAGE
   padding: 50px;
   margin-top: 50px;
   box-shadow: 5px 5px 10px 2px #1f1f1f;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-#saveButton {
+#mapButton {
   position: absolute;
   left: 50%;
   top: 85%;
@@ -208,6 +212,13 @@ STYLES SEARCH CARD SECTION ON HOMEPAGE
     padding-right: 10px;
   }
 
+  .hero-text4 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
   .hero-left {
     margin-left: 5px;
   }
@@ -219,6 +230,15 @@ STYLES SEARCH CARD SECTION ON HOMEPAGE
   .hero-header {
     width: 100%;
     max-width: 1200px;
+  }
+}
+
+@media (max-width: 781px) {
+  .hero-text4 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
   }
 }
 
@@ -258,6 +278,12 @@ STYLES SEARCH CARD SECTION ON HOMEPAGE
   }
 }
 
+@media (max-width: 627px) {
+  .hero-text4 {
+  display: none;
+  }
+}
+
 @media (max-width: 479px) {
   .hero-logo {
     margin-left: 0px;
@@ -271,6 +297,7 @@ STYLES SEARCH CARD SECTION ON HOMEPAGE
   .hero-get-started1 {
     width: 100%;
   }
+
 }
 
 /******************************************************************************
