@@ -9,16 +9,13 @@
         </div>
         <h1 class="hero-text4">Target Location Search</h1>
         <div class="navigation-links">
-          {{#if loggedIn}}
           <button id="logout" class="nav-button nav-text">Logout</button>
-          {{else}}
-          <button onclick="redirectToSignIn()" class="nav-button nav-text">Sign in</button>
-          {{/if}}
         </div>
     </div>
     </nav>
   </div>
   </div>
+
   <div id='errorCard' class="bg-red-700 px-10 py-5 rounded relative hidden" role="alert">
     <p class="font-bold text-2xl">There was an error</p>
     <p class="text-md">T-Number or Address was not found please try again</p>
@@ -31,6 +28,7 @@
       </svg>
     </span>
   </div>
+
   <div class="hero-header">
     <form id='newForm' class="hero-container pt-8">
       <input id="searchText" type="text" placeholder="Search by T-Number or Address"
@@ -40,6 +38,7 @@
       </div>
     </form>
   </div>
+  
   <div id="searchCard"
     class="bg-white rounded-lg shadow-md p-8 mt-15 flex flex-wrap invisible relative text-2xl">
     <div>
@@ -51,7 +50,6 @@
     </div>
   </div>
 </section>
-
 {{! Footer }}
 <footer>
   <div class="bg-black">
@@ -62,6 +60,9 @@
     </div>
   </div>
 </footer>
+
+
+
 
 <script src="/js/script.js"></script>
 <script src="/js/logout.js"></script>
