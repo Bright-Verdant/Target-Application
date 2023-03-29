@@ -80,3 +80,9 @@ document.getElementById('closeError').addEventListener("click", function () {
     document.querySelector("#errorCard").style.display = 'none';
 });
 
+const mapButton = document.getElementById('mapButton');
+const mapContainer = document.getElementById('mapContainer');
+
+mapButton.addEventListener('click', () => {
+  mapContainer.classList.toggle('hidden');
+});

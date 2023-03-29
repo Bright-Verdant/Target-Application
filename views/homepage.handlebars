@@ -29,6 +29,20 @@
       </div>
     </div>
 
+{{!-- map --}}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+     <div></div>
+      <div class="w-full h-96">
+       <div class="relative">
+         <div class="border-20 border-red rounded-xl overflow-hidden">
+          <div id="mapContainer" class="absolute top-10 left-0 w-full h-full hidden z-999">
+            <iframe id="map" class="w-full h-full"></iframe>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  {{!-- end map --}}
 
     <div
       id="errorCard"
@@ -63,7 +77,6 @@
       </form>
     </div>
 
-    
     <div
       id="searchCard"
       class="bg-white rounded-lg shadow-md p-8 mt-15 flex flex-wrap overflow-hidden invisible relative text-2xl"
@@ -83,33 +96,14 @@
           id="cityStatePostalEl"
           class="font-medium pr-12 text-2xl text-left mb-5"
         ></div>
-        <button
-          id="saveButton"
-          class="font-bold bg-black text-white py-2 px-4 rounded"
-        >Save</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{!-- display's the embed map api from /public/js/script.js --}}
-  <div class="flex justify-center items-center h-screen">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div></div>
-        <div class="w-full h-96">
-          <div class="relative">
-                  <div id="mapContainer" class="absolute top-50 left-100 w-full h-full">
-                  <iframe id="map" class="w-full h-full"></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
+        {{!-- map button --}}
+        <div class="flex justify-start items-start h-screen font-bold bg-black text-white py-2 px-4 rounded">
+            <button id="mapButton" class="map-button">Show Map</button>
         </div>
-      </div>
     </div>
   </div>
-  {{!-- end map container --}}
-
+  
+</section>
 
 {{! Footer }}
 <footer>
