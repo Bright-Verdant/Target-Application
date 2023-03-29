@@ -23,9 +23,9 @@ function redirectToSignIn() {
 window.location.href = '/login';
 }
 
-document
+const b = document
   .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+  b.addEventListener('submit', loginFormHandler);
 
 
 

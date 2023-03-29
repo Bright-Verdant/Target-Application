@@ -4,8 +4,10 @@ const userRoutes = require("../routes/api/userRoutes");
 const signUp = require("./signUp");
 const apiRoutes = require("./api");
 const data = require("../seeds/targetLocations.json");
+const guest = require('./guestRoute');
 
 // User Routes to pages
+router.use("/", guest);
 router.use("/", homeRoutes);
 router.use("/", userRoutes);
 router.use("/", signUp);

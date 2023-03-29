@@ -7,7 +7,7 @@ exports.getLoginPage = ('/login', (req, res) => {
   if (req.session.loggedIn) {
     // Render the 'home' template with a logout button
     const logoutButton = '<button id="logout" class="nav-button nav-text">Logout</button>';
-    res.render('home', { logoutButton });
+    res.render('home', { logoutButton, loggedIn: true, logoutButton });
     return;
   }
   // Otherwise, render the 'login' template
