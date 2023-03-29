@@ -29,6 +29,7 @@
       </div>
     </div>
 
+
     <div
       id="errorCard"
       class="bg-red-100 border border-red-400 text-red-700 px-10 py-5 rounded relative hidden"
@@ -61,6 +62,7 @@
         </div>
       </form>
     </div>
+
     
     <div
       id="searchCard"
@@ -89,6 +91,25 @@
     </div>
   </div>
 </section>
+
+{{!-- display's the embed map api from /public/js/script.js --}}
+  <div class="flex justify-center items-center h-screen">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div></div>
+        <div class="w-full h-96">
+          <div class="relative">
+                  <div id="mapContainer" class="absolute top-50 left-100 w-full h-full">
+                  <iframe id="map" class="w-full h-full"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{!-- end map container --}}
+
 
 {{! Footer }}
 <footer>

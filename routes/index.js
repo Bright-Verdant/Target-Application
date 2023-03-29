@@ -28,6 +28,8 @@ router.get("/api/:value", (req, res) => {
       city: targetObject.city,
       state: targetObject.state,
       postal: targetObject.postal,
+      latitude: targetObject.latitude,
+      longitude: targetObject.longitude,
     };
     res.json(filteredObject);
   } else {
