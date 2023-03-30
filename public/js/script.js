@@ -66,6 +66,8 @@ function appearCard() {
 
 function showError() {
     document.querySelector("#errorCard").style.display = 'block';
+    mapButton.innerText = 'Show Map';
+    mapContainer.style.display = "none";
     document.getElementById('newForm').reset();
 }
 
@@ -75,7 +77,6 @@ function showDetails() {
 
 document.getElementById('searchBut').addEventListener('click', getSearchData)
 
-
 document.getElementById('closeError').addEventListener("click", function () {
     document.querySelector("#errorCard").style.display = 'none';
 });
@@ -84,5 +85,11 @@ const mapButton = document.getElementById('mapButton');
 const mapContainer = document.getElementById('mapContainer');
 
 mapButton.addEventListener('click', () => {
-  mapContainer.classList.toggle('hidden');
+    mapButton.innerText = 'Show Map';
+    if (mapContainer.style.display === "none") {
+        mapContainer.style.display = "block";
+        mapButton.innerText = 'Close Map';
+      } else {
+        mapContainer.style.display = "none";
+      }
 });

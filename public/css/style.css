@@ -164,11 +164,11 @@ STYLES SEARCH CARD SECTION ON HOMEPAGE
   box-shadow: 5px 5px 10px 2px #1f1f1f;
   border-radius: 65px;
   width: 400px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 #newForm {
-  margin-top: 45px;
+  margin-top: 20px;
 }
 
 #errorCard {
@@ -182,6 +182,26 @@ STYLES SEARCH CARD SECTION ON HOMEPAGE
 
 #cityStatePostalEl {
   margin-bottom: 30px;
+}
+
+#loginSignup {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#centerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#outlineBox {
+  border: 2px solid black;
 }
 
 /******************************************************************************
@@ -324,14 +344,12 @@ footer {
 
 #mapContainer {
   width: 200px;
-  height: 200px;
   border-radius: 50px;
   margin-right: 85px;
   padding-top: 20px;
 }
 
 #map {
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px 2px #cc0000;
-  opacity: 85%;
+  position: absolute;
+  margin-top: 255px;
 }
