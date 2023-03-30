@@ -348,7 +348,12 @@ footer {
   border-radius: 50px;
   margin-right: 85px;
   padding-top: 20px;
+  display: none;
 }
+
+#mapContainer.show {
+  display: block;
+} 
 
 #map {
   position: absolute;

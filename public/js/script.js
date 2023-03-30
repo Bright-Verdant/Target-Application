@@ -66,13 +66,13 @@ function appearCard() {
 
 function showError() {
     document.querySelector("#errorCard").style.display = 'block';
-    mapButton.innerText = 'Show Map';
-    mapContainer.style.display = "none";
+    mapContainer.classList.add('invisible');
     document.getElementById('newForm').reset();
 }
 
 function showDetails() {
     document.querySelector("#searchCard").style.display = 'block';
+    mapContainer.classList.remove("invisible");
 }
 
 document.getElementById('searchBut').addEventListener('click', getSearchData)
@@ -85,11 +85,10 @@ const mapButton = document.getElementById('mapButton');
 const mapContainer = document.getElementById('mapContainer');
 
 mapButton.addEventListener('click', () => {
-    mapButton.innerText = 'Show Map';
-    if (mapContainer.style.display === "none") {
-        mapContainer.style.display = "block";
+    mapContainer.classList.toggle('show');
+    if (mapContainer.classList.contains('show')) {
         mapButton.innerText = 'Close Map';
-      } else {
-        mapContainer.style.display = "none";
-      }
+    } else {
+        mapButton.innerText = 'Show Map';
+    }
 });
