@@ -39,6 +39,11 @@
     </form>
   </div>
 
+  {{! map }}
+  <div id="mapContainer" class="hidden">
+    <iframe id="map"></iframe>
+  </div>
+
   <div id="searchCard" class="bg-white rounded-lg shadow-md p-8 mt-10 flex flex-wrap invisible relative text-2xl">
     <div>
       <img alt="Target" class="hero-logo1 absolute top-0 right-0 rounded-full mt-6 mr-2" src="./img/target-logo.png" />
@@ -47,16 +52,11 @@
       <div id="cityStatePostalEl" class="font-medium pr-12 text-2xl text-left mb-5"></div>
       {{! map button }}
       <div class="">
-        <button id="mapButton" class="map-button"></button>
+        <button id="mapButton" class="map-button">Show Map</button>
       </div>
     </div>
   </div>
 </section>
-
-{{! map }}
-<div id="mapContainer" class="hidden">
-  <iframe id="map"></iframe>
-</div>
 
 {{! Footer }}
 <footer>

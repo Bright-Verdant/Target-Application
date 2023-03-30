@@ -164,11 +164,11 @@ STYLES SEARCH CARD SECTION ON HOMEPAGE
   box-shadow: 5px 5px 10px 2px #1f1f1f;
   border-radius: 65px;
   width: 400px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 #newForm {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 #errorCard {
@@ -342,6 +342,7 @@ footer {
   border-radius: 10px;
 }
 
+
 #mapContainer {
   width: 200px;
   border-radius: 50px;
@@ -351,5 +352,5 @@ footer {
 
 #map {
   position: absolute;
-  margin-top: 255px;
+  margin-top: 285px;
 }
