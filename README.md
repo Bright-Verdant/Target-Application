@@ -5,7 +5,7 @@
 
 ## Where You Can Find Us
 
-![image](https://user-images.githubusercontent.com/119143763/228414432-8ed3f2d3-90ea-4338-a06f-529d5a616e1e.png)
+![image](https://user-images.githubusercontent.com/60548511/228999532-602b35f6-e0d3-41c0-9e47-90e8c27bdc9e.png)
 
 
 
