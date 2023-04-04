@@ -5,9 +5,6 @@
 
 ## Where You Can Find Us
 
-![image](https://user-images.githubusercontent.com/60548511/228999532-602b35f6-e0d3-41c0-9e47-90e8c27bdc9e.png)
-
-
 
 Link to live site: https://target-search-application.herokuapp.com/
 
