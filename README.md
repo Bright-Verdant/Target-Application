@@ -64,7 +64,7 @@ DB_PASSWORD = 'YOUR_MYSQL_PASSWORD_HERE' (the .env file is for testing or modifi
 
 -Start the application: npm start
 
--The application should now be running locally at http://localhost:3001
+-The application should now be running locally at https://target-search-application.herokuapp.com/
 
 
 ## Deployment
