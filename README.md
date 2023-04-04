@@ -9,7 +9,8 @@
 
 
 
--https://github.com/Bright-Verdant/Target-Application.git
+Link to live site: https://target-search-application.herokuapp.com/
+
 ## User Story
 
 AS A webpage user 
